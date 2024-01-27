@@ -2,8 +2,8 @@ const convertBtn= document.getElementById('convert-button'),
       convertInput=document.getElementById('convert-input'),
       resultTitle=document.querySelector('.result');
 
-convertBtn.addEventListener('click',(e)=>{
-  e.preventDefault();
+convertBtn.addEventListener('click',()=>{
+  
   getAudio();
 })
 
