@@ -2,8 +2,9 @@ const convertBtn= document.getElementById('convert-button'),
       convertInput=document.getElementById('convert-input'),
       resultTitle=document.querySelector('.result');
 
-convertBtn.addEventListener('click',()=>{
-getAudio();
+convertBtn.addEventListener('click',(e)=>{
+  e.preventDefault();
+  getAudio();
 })
 
 
@@ -11,11 +12,16 @@ getAudio();
 async function getAudio(){
     let link = convertInput.value;
     let parts=link.split("=");
+    let partMobile=link.split('/')[3].split('?');
     let videoId="";
 
     if (parts.length===2) {
         videoId=parts[1];
         console.log(videoId);
+    }
+    if (partMobile.length===2) {
+       videoId=partMobile[0];
+       console.log(videoId);
     }
     else{
       alert('Error Invalid Youtube Link!');
