@@ -47,6 +47,6 @@ convertWebBtn.addEventListener('click',()=>{
   
       setTimeout(() => {
           window.open(result.link,"_blank");
-          convertMobileInput.value='';
+          convertWebInput.value='';
       }, 1000);
   }
